@@ -13,80 +13,66 @@
   pointer-events: none;
 }
 
-
-img {
+.img-inverted-darktheme {
   filter: invert(1) brightness(2);
 }
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #121212;
+  background-color: #121212; /* Fallback for browsers that don't support gradients or images */
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 250vh;
+  min-height: 100vh; /* Consolidated min-height */
   margin: 0;
   text-align: center;
-  padding: 20px;
-  min-height: 15  0vh;
-    
+  /* padding: 20px; Removed global body padding */
+  
   background-image: url('../img/bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 250vh;
 }
 
-input, button {
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  color: white;
+/* General input/button styling is now handled by Bootstrap components (cards, form-control, btn) */
+/* It's better to rely on Bootstrap defaults and utility classes for theming these. */
+
+/* Custom styles for form elements within dark cards if Bootstrap defaults are not sufficient */
+/* .form-control.bg-secondary {
+  color: #fff; 
 }
 
-input {
-  width: 200px;
+.form-control.bg-secondary::placeholder {
+  color: #adb5bd; 
 }
 
-button {
-  background-color: #1e88e5;
-  color: white;
-  cursor: pointer;
-}
+.form-control.bg-secondary:focus {
+  color: #fff;
+  background-color: #343a40; /* Slightly different shade for focus if needed 
+  border-color: #86b7fe; 
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); 
+} */
 
-button:hover {
-  background-color: #1565c0;
-}
+/* Ensure list group items within dark cards have appropriate text color */
+/* .list-group-item.bg-dark.text-light {
+    /* Styles for list group items, if needed beyond Bootstrap text-light, though it should suffice. 
+     * border-color: #495057; /* Example border color for dark theme list items 
+} */
+
 
 .hidden {
   display: none;
 }
 
-.question {
-  margin-bottom: 20px;
-}
+/* .question, #options, #options div, specific label styles are removed as Bootstrap handles them now. */
 
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#options {
-  margin: 15px 0;
-}
-
-#options div {
-  margin: 5px 0;
-}
-
-ul {
+ul { /* This is a generic ul, if it's for the scoreList, list-group classes handle it. */
   list-style: none;
   padding: 0;
 }
 
-li {
+li { /* This is a generic li, if it's for the scoreList, list-group-item classes handle it. */
   margin: 5px 0;
 }

@@ -47,22 +47,22 @@ const questions = [
     document.getElementById("questionText").innerText = q.question;
     const optionsDiv = document.getElementById("options");
     optionsDiv.innerHTML = "";
-    q.options.forEach((option, index) => {
+    q.options.forEach((optionText, index) => {
+      const label = document.createElement("label");
+      label.className = "list-group-item list-group-item-action bg-dark text-light border-secondary"; // Added classes for Bootstrap styling
+      label.htmlFor = "opt" + index;
+
       const radio = document.createElement("input");
+      radio.className = "form-check-input me-1"; // Bootstrap class
       radio.type = "radio";
-      radio.name = "option";
+      radio.name = "option"; // Consistent name for radio group
       radio.value = index;
       radio.id = "opt" + index;
-  
-      const label = document.createElement("label");
-      label.htmlFor = "opt" + index;
-      label.innerText = option;
-  
-      const div = document.createElement("div");
-      div.appendChild(radio);
-      div.appendChild(label);
-  
-      optionsDiv.appendChild(div);
+      
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(" " + optionText)); // Add option text after radio
+
+      optionsDiv.appendChild(label);
     });
   }
   
@@ -87,6 +87,7 @@ const questions = [
     list.innerHTML = "";
     players.forEach(p => {
       const li = document.createElement("li");
+      li.className = "list-group-item bg-secondary text-light border-dark"; // Added classes for Bootstrap styling
       li.innerText = `${p.name}: ${p.score} Punkte`;
       list.appendChild(li);
     });
