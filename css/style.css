@@ -1,0 +1,92 @@
+#videoContainer {
+  position: relative;
+  width: 100%;
+}
+#video, #canvas {
+  width: 100%;
+  display: block;
+}
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+
+img {
+  filter: invert(1) brightness(2);
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250vh;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  min-height: 15  0vh;
+    
+  background-image: url('../img/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 250vh;
+}
+
+input, button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+input {
+  width: 200px;
+}
+
+button {
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+.hidden {
+  display: none;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#options {
+  margin: 15px 0;
+}
+
+#options div {
+  margin: 5px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
